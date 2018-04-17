@@ -8,21 +8,21 @@ import { Component } from '@angular/core';
 export  class CarroComponent {
     public nombre_componente = 'Componente de carro';
     public listado_carros = 'carro 1, carro 2';
-    public nombre: string ;
+    public placa: string ;
     public edad:number ;
     public mayorDeEdad:boolean ;
     public carros:Array<any> = ['carro1', 25, 'carro2'] ;
     comodin:any ;
 
     constructor(){
-        this.nombre = 'Nathally';
+        this.placa = 'Nathally';
         this.edad =15;
         this.comodin =8;
         this.mayorDeEdad= false;
     }
 
     cambiarNombre (){
-        this.nombre = 'Sebas';
+        this.placa = 'Sebas';
     }
 
     cambiarEdad (edad){
@@ -32,7 +32,7 @@ export  class CarroComponent {
     ngOnInit(){
         this.cambiarNombre();
         this.cambiarEdad(this.edad);
-        console.log(this.nombre +" "+ this.edad);
+        console.log(this.placa +" "+ this.edad);
         //Variables y Alcance
         var uno = 8;
         var dos = 15;

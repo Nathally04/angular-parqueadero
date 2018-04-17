@@ -1,8 +1,20 @@
 <h3 style="color:blueviolet;">
     {{titulo}}
 </h3>
+<br/>
+<br/>
+<strong>Moto Dentro:</strong> 
 
-   <strong>Moto Dentro:</strong> 
-   <ul>
-       <li>{{moto.placa}}</li>
-   </ul>
+<div *ngIf= "cilindraje == true">
+    <button (click)="cambiarCilindraje(false)">mostrar vehiculo</button>
+    <ul>
+        <li>{{moto.placa}}</li>
+    </ul>
+</div>
+
+<div *ngIf= "cilindraje == false">
+    <button (click)="cambiarCilindraje(true)">mostrar lista de vehiculo</button>
+    <ul>
+        <li>{{motos[1].tipo}}</li>
+    </ul>
+</div>

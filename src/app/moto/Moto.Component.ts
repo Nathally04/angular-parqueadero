@@ -9,9 +9,24 @@ import {Moto} from './Moto'
 export class MotoComponent{
     public titulo = 'Componente Moto';
     public moto:Moto;
+    public motos:Array<Moto>;
+    public cilindraje:boolean;
+
+    constructor(){
+        this.moto = new Moto ("sdf455", 1);
+        this.motos=[
+            new Moto ("sdf455", 1),
+            new Moto ("258sdf", 2)
+        ];
+        this.cilindraje=true;
+    }
 
     ngOnInit(){
-        this.moto = new Moto ("sdf455", 1);
         console.log(this.moto);
+        console.log(this.motos);
+    }
+
+    cambiarCilindraje (valor){
+        this.cilindraje= valor;
     }
 }
