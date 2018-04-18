@@ -11,6 +11,7 @@ export class MotoComponent{
     public moto:Moto;
     public motos:Array<Moto>;
     public cilindraje:boolean;
+    public color:string;
 
     constructor(){
         this.moto = new Moto ("sdf455", 1);
@@ -19,6 +20,7 @@ export class MotoComponent{
             new Moto ("258sdf", 2)
         ];
         this.cilindraje=true;
+        this.color='blue';
     }
 
     ngOnInit(){

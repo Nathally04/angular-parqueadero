@@ -1,0 +1,32 @@
+<h1 style="color:deepskyblue;">
+    {{titulo}}
+</h1>
+
+<form #formIngresos = "ngForm" (ngSubmit)= "OnSubmit(); formIngresos.reset();">
+    <p>
+        <label>Placa: </label>
+        <input type="text" name="placa" #placa="ngModel" [(ngModel)]= "ingresos.placa" required>
+        <span *ngIf = "placa.touched && !placa.valid">
+                La placa es requerida!
+            </span>
+    </p>
+    
+    <p>
+        <label>tipo: </label>
+        <input type="text" name="tipo" #tipo="ngModel" [(ngModel)]= "ingresos.tipo" required>
+        <span *ngIf = "tipo.touched && !tipo.valid">
+            El tipo es requerido!
+        </span> 
+    </p>
+    <p>
+        <label>estado: </label>
+        <input type="text" name="estado" #estado="ngModel" [(ngModel)]= "ingresos.estado" required>
+        <span *ngIf = "estado.touched && !estado.valid">
+                El estado es requerido!
+            </span>
+    </p>
+    <p> 
+        <input type = "submit" value = "ingresar"  [disabled]="!formIngresos.form.valid">
+    </p>
+   
+</form>
